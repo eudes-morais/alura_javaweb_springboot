@@ -1,6 +1,8 @@
 package br.com.screenmatch.models;
 
-public class Movie extends Titulo {
+import br.com.screenmatch.calculos.Classificacao;
+
+public class Movie extends Titulo implements Classificacao {
     private String director;
 
     public String getDirector() {
@@ -9,5 +11,10 @@ public class Movie extends Titulo {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    @Override
+    public int getClassificacao() {
+        return 0;
     }
 }
