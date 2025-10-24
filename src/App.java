@@ -1,4 +1,6 @@
 import br.com.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.screenmatch.calculos.Recommendation;
+import br.com.screenmatch.models.Episodio;
 import br.com.screenmatch.models.Movie;
 import br.com.screenmatch.models.Serie;
 
@@ -15,9 +17,9 @@ public class App {
 
         movie.displayTechnicalDetails();
 
-        movie.addRating(10.0);
-        movie.addRating(8.5);
-        movie.addRating(9.5);
+        movie.addRating(7.0);
+        movie.addRating(6.5);
+        movie.addRating(6.5);
 
         System.out.println("Total das avaliações: " + movie.getTotalOfRating());
         // System.out.println("Total de avaliações: " + movie.totalRatings);
@@ -43,5 +45,15 @@ public class App {
         calculadora.inclui(serie);
         calculadora.inclui(anotherMovie);
         System.out.println("Tempo total de maratona: " + calculadora.getTempoTotal());
+
+        Recommendation recommendation = new Recommendation();
+        recommendation.isRecommended(movie);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumber(1);
+        episodio.setSerie(serie);
+        episodio.setTotalScore(300);
+        recommendation.isRecommended(episodio);
+        
     }
 }

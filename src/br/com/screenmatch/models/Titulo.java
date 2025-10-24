@@ -88,5 +88,14 @@ public class Titulo {
         System.out.println("Nome: " + name);
         System.out.println("Ano de Lançamento: " + releaseYear);
         // System.out.println("Duração em minutos: " + durationInMinutes);
-    }   
+    }
+
+    public void rating(double nota){
+        sumOfRating += nota;
+        totalRatings++;
+    }
+
+    public double getMedia(){
+        return sumOfRating / totalRatings;
+    }
 }
