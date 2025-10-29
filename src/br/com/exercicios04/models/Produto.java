@@ -1,10 +1,26 @@
 package br.com.exercicios04.models;
 
-public class Produto {
+import br.com.exercicios04.calculos.Vendavel;
+
+public class Produto implements Vendavel {
     private String nome;
     private double precoUnitario;
+    
+    public String getNome() {
+        return nome;
+    }
 
-    // Construtor e outros métodos
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPrecoUnitario() {
+        return precoUnitario;
+    }
+
+    public void setPrecoUnitario(double precoUnitario) {
+        this.precoUnitario = precoUnitario;
+    }
 
     @Override
     public double calcularPrecoTotal(int quantidade) {
