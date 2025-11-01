@@ -54,6 +54,7 @@ public class App {
         episodio.setSerie(serie);
         episodio.setTotalScore(300);
         recommendation.isRecommended(episodio);
-        
+
+        // ArrayList<Movie> myMovies = new ArrayList<>();       
     }
 }
