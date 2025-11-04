@@ -3,6 +3,7 @@ import br.com.screenmatch.calculos.Recommendation;
 import br.com.screenmatch.models.Episodio;
 import br.com.screenmatch.models.Movie;
 import br.com.screenmatch.models.Serie;
+import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) {
@@ -55,6 +56,11 @@ public class App {
         episodio.setTotalScore(300);
         recommendation.isRecommended(episodio);
 
-        // ArrayList<Movie> myMovies = new ArrayList<>();       
+        ArrayList<Movie> myMovies = new ArrayList<>();
+        myMovies.add(movie);
+        myMovies.add(anotherMovie);
+        System.out.println("Tamanho da lista: " + myMovies.size());
+        System.out.println("Primeiro filme: " + myMovies.get(0).getName());
+        System.out.println(myMovies);
     }
 }
