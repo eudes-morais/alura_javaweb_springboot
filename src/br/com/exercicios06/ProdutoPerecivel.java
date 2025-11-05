@@ -16,6 +16,6 @@ public class ProdutoPerecivel extends Produto {
 
     @Override
     public String toString() {
-        return "ProdutoPerecivel Data de Validade: " + dataValidade;
+        return "Produto Perecivel " + getNome() + ", preço: " + getPreco() + ", Quantidade: " + getQuantidade() + ", Data de Validade: " + dataValidade;
     }
 }

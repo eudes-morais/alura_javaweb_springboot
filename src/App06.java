@@ -21,8 +21,6 @@ public class App06 {
             System.out.println("Produto " + (i+1) + ": " + listaDeProdutos.get(i));
         }
 
-
-
         ProdutoPerecivel produtoPerecivel = new ProdutoPerecivel("Iogurte", 10.00, 200, "05/11/2025");
         System.out.println(produtoPerecivel);
     }
