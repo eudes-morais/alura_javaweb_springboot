@@ -5,6 +5,10 @@ import br.com.screenmatch.calculos.Classificacao;
 public class Movie extends Titulo implements Classificacao {
     private String director;
 
+    public Movie(String name, int releaseYear) {
+        super(name, releaseYear);
+    }
+
     public String getDirector() {
         return director;
     }

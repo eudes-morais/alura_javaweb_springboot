@@ -7,13 +7,7 @@ import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) {
-        Movie movie = new Movie();
-
-        movie.setName("The Matrix");
-        movie.setReleaseYear(1999);
-        // movie.includedInPlan = true;
-        // movie.rating = 8.7;
-        // movie.totalRatings = 1500;
+        Movie movie = new Movie("The Matrix", 1999);
         movie.setDurationInMinutes(136);
 
         movie.displayTechnicalDetails();
@@ -23,12 +17,9 @@ public class App {
         movie.addRating(6.5);
 
         System.out.println("Total das avaliações: " + movie.getTotalOfRating());
-        // System.out.println("Total de avaliações: " + movie.totalRatings);
         System.out.println("Média das avaliações: " + movie.getAverageRating());
 
-        Serie serie = new Serie();
-        serie.setName("Breaking Bad");
-        serie.setReleaseYear(2008);
+        Serie serie = new Serie("Breaking Bad", 2008);
         serie.setNumberOfSeasons(5);
         serie.showFichaTecnica();
         serie.setMinutesPerEpisode(47);
@@ -36,9 +27,7 @@ public class App {
         serie.setEpisodesPerSeason(12);
         System.out.println("Tempo da série: " + serie.getDurationInMinutes());
 
-        Movie anotherMovie = new Movie();
-        anotherMovie.setName("Interstellar");
-        anotherMovie.setReleaseYear(2014);
+        Movie anotherMovie = new Movie("Interstellar", 2014);
         anotherMovie.setDurationInMinutes(169);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();

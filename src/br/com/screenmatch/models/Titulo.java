@@ -8,6 +8,11 @@ public class Titulo {
     private int totalRatings;
     private int durationInMinutes;
 
+    public Titulo(String name, int releaseYear) {
+        this.name = name;
+        this.releaseYear = releaseYear;
+    }
+
     public void displayTechnicalDetails() {
         System.out.println("Name: " + name);
         System.out.println("Release Year: " + releaseYear);
