@@ -48,4 +48,8 @@ public class Serie extends Titulo {
         return totalMinutes;        
     }
 
+    @Override
+    public String toString() {
+        return "Serie: " + getName();
+    }
 }
