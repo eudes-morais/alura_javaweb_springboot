@@ -50,6 +50,6 @@ public class Serie extends Titulo {
 
     @Override
     public String toString() {
-        return "Serie: " + getName();
+        return String.format("Série: %s (%d)", getName(), getReleaseYear());
     }
 }
