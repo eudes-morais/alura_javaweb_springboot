@@ -1,6 +1,7 @@
 import br.com.exercicios07.Animal;
 import br.com.exercicios07.Cachorro;
 import br.com.exercicios07.Circulo;
+import br.com.exercicios07.ContaBancaria;
 import br.com.exercicios07.Forma;
 import br.com.exercicios07.Produto;
 import br.com.exercicios07.Quadrado;
@@ -69,5 +70,35 @@ public class App07 {
             double area = elem.calcularArea();
             System.out.printf("Área do %s: %.2f\n", elem.toString(), area); 
         }
+
+        System.out.println("====================================================================");
+
+        ContaBancaria conta1 = new ContaBancaria("0001-1", 5000.00);
+        ContaBancaria conta2 = new ContaBancaria("0002-2", 3000.00);
+        ContaBancaria conta3 = new ContaBancaria("0003-3", 2500.00);
+        ContaBancaria conta4 = new ContaBancaria("0004-4", 3600.00);
+        ContaBancaria conta5 = new ContaBancaria("0005-5", 300.00);
+        ContaBancaria conta6 = new ContaBancaria("0006-6", 30000.00);
+        ContaBancaria conta7 = new ContaBancaria("0007-7", 2750.00);
+
+        ArrayList<ContaBancaria> contas = new ArrayList<>();
+        contas.add(conta1);
+        contas.add(conta2);
+        contas.add(conta3);
+        contas.add(conta4);
+        contas.add(conta5);
+        contas.add(conta6);
+        contas.add(conta7);
+
+        double maiorSaldo = 0;
+        String contaMor = "";
+        for (ContaBancaria conta : contas) {
+            if (conta.getSaldo() > maiorSaldo) {
+                maiorSaldo = conta.getSaldo();
+                contaMor = conta.getNumeroConta();
+            }
+        }
+
+        System.out.printf("Conta com maior saldo: %s\n", contaMor);
     }
 }

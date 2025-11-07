@@ -4,6 +4,7 @@ import br.com.screenmatch.models.Movie;
 import br.com.screenmatch.models.Serie;
 import br.com.screenmatch.models.Titulo;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Listas {
     public static void main(String[] args) {
@@ -29,5 +30,8 @@ public class Listas {
                 System.out.println("Classificação: " + iMovie.getClassificacao());
             }
         }
+
+        Collections.sort(lista);
+        System.out.printf("Lista de títulos ordenados alfabeticamente: %s", lista);
     }
 }
